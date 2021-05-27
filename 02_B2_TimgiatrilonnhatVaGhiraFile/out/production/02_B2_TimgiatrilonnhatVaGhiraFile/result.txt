@@ -1,2 +1,4 @@
 Giá trị lớn nhất là: 10
 Giá trị lớn nhất là: 502Giá trị lớn nhất là: 1000
+Giá trị lớn nhất là: 100
+Giá trị lớn nhất là: 100

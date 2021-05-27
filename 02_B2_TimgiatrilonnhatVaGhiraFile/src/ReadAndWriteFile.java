@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ReadAndWriteFile {
@@ -13,7 +14,10 @@ public class ReadAndWriteFile {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line = "";
             while ((line = br.readLine()) != null) {
-                numbers.add(Integer.parseInt(line));
+                List<String> list = Arrays.asList(line.split(" "));
+                for (String str: list) {
+                    numbers.add(Integer.parseInt(str));
+                }
             }
             br.close();
         } catch (Exception e) {

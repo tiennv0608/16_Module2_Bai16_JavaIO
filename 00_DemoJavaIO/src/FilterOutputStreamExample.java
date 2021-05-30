@@ -1,23 +1,16 @@
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FilterOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class FilterOutputStreamExample {
     public static void main(String[] args) throws IOException {
-        FileOutputStream file = null;
-        FilterOutputStream filter = null;
+        int inChar;
+        System.out.println("Enter a Character:");
         try {
-            file = new FileOutputStream(new File("data/test.txt"));
-            filter = new FilterOutputStream(file);
-            String s = "gpcoder.com";
-            byte b[] = s.getBytes();
-            filter.write(b);
-            filter.flush();
-            System.out.println("Success...");
-        } finally {
-            filter.close();
-            file.close();
+            inChar = System.in.read();
+            System.out.print("You entered ");
+            System.out.println(inChar);
+        }
+        catch (IOException e){
+            System.out.println("Error reading from user");
         }
     }
 }
